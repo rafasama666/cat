@@ -211,39 +211,3 @@ footer .social-btn:hover {
 footer .social-btn:hover i {
     transform: rotate(15deg); /* Rotate icon slightly */
 }
-
-/* ========== Responsive Design ========== */
-/* For tablets (screens larger than 768px) */
-@media (min-width: 768px) {
-    .content-box {
-        max-width: 600px;
-    }
-
-    header h1 {
-        font-size: 3.5em; /* Larger text for tablets */
-    }
-
-    header .header-image {
-        width: 150px; /* Larger logo */
-    }
-
-    footer .social-btn {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-/* For desktops (screens larger than 1024px) */
-@media (min-width: 1024px) {
-    .content-box {
-        max-width: 800px;
-    }
-
-    header h1 {
-        font-size: 4em;
-    }
-
-    header .btn {
-        font-size: 1.5em;
-    }
-}
