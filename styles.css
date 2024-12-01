@@ -211,3 +211,50 @@ footer .social-btn:hover {
 footer .social-btn:hover i {
     transform: rotate(15deg); /* Rotate icon slightly */
 }
+
+
+/* Media Query for Smaller Screens (Mobile) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Smaller text size */
+    }
+
+    header .header-image {
+        width: 100px; /* Smaller logo size */
+    }
+
+    header .btn {
+        font-size: 1em; /* Smaller button font */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    .content-box {
+        padding: 15px; /* Less padding for smaller screens */
+    }
+
+    footer .social-btn {
+        font-size: 0.9em; /* Smaller buttons */
+        padding: 8px 12px; /* Adjust padding */
+    }
+}
+
+/* Media Query for Very Small Screens (Phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Smaller text size */
+    }
+
+    header .header-image {
+        width: 80px; /* Smaller logo */
+    }
+
+    header .btn {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+
+    footer .social-btn {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+}
