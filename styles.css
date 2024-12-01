@@ -1,0 +1,213 @@
+/* ========== General Styling ========== */
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffc8dd; /* Soft pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Main Content Box */
+.content-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff; /* White background for content */
+    border: 10px solid #d8b4fe; /* Lavender border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    text-align: center;
+}
+
+/* ========== Header Styling ========== */
+header {
+    padding: 20px 10px;
+    background: #ffafcc; /* Peachy pink background */
+    border-bottom: 5px solid #cdb4db; /* Bright purple border */
+}
+
+/* $COIN Text Styling */
+header h1 {
+    margin: 10px 0;
+    font-size: 4em; /* Large font for marketing */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: center;
+    background: linear-gradient(90deg, #8b5cf6, #d946ef, #d97706); /* Gradient colors */
+    background-size: 300%; /* Expand gradient for animation */
+    -webkit-background-clip: text; /* Clip the gradient to text only */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    text-shadow: 
+        0 0 10px #d946ef, /* Pink glow */
+        0 0 20px #9333ea, /* Purple glow */
+        0 0 30px rgba(0, 0, 0, 0.5); /* Black outer glow for separation */
+    animation: gradient-animation 3s infinite; /* Animate the gradient */
+    position: relative; /* For sparkles and z-index */
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8); /* Add subtle black outline for contrast */
+}
+
+/* Gradient Animation for $COIN Text */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Sparkle Effect for $COIN Text */
+header h1::before, header h1::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #ffffff 0%, #ffc8dd 70%, transparent 100%);
+    border-radius: 50%; /* Circular sparkles */
+    animation: sparkle 2s infinite ease-in-out; /* Sparkle animation */
+    z-index: 0; /* Sparkles go behind the text */
+}
+
+header h1::before {
+    top: -20px; /* Above the text */
+    left: 20%; /* Slightly to the left */
+    animation-delay: 0s; /* No delay for the first sparkle */
+}
+
+header h1::after {
+    top: -20px; /* Above the text */
+    right: 20%; /* Slightly to the right */
+    animation-delay: 1s; /* Delayed animation for the second sparkle */
+}
+
+/* Sparkle Animation */
+@keyframes sparkle {
+    0%, 100% {
+        transform: scale(0.5); /* Start and end small */
+        opacity: 0; /* Fully transparent */
+    }
+    50% {
+        transform: scale(1.5); /* Expand the sparkle */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Header Image (Logo) */
+header .header-image {
+    width: 150px; /* Logo size */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%; /* Circular logo */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: bounce 2s infinite; /* Bounce animation */
+}
+
+/* Bounce Animation for Logo */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Default position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move up slightly */
+    }
+}
+
+/* ========== Button Styling ========== */
+/* BUY Button */
+header .btn {
+    padding: 15px 30px; /* Button padding */
+    background: #a6c8f0; /* Softer blue button */
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    border-radius: 12px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 1.5em; /* Larger button */
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 3px solid #d8b4fe; /* Lavender border */
+    transition: all 0.3s ease; /* Smooth transition */
+    animation: pulse 1.5s infinite; /* Pulse animation */
+    box-shadow: 0 0 10px rgba(166, 200, 240, 0.5); /* Soft glow */
+}
+
+header .btn:hover {
+    background: #d8b4fe; /* Lavender on hover */
+    color: #ffffff; /* Keep text white */
+    box-shadow: 0 0 15px rgba(216, 180, 254, 0.8); /* Stronger glow */
+}
+
+/* Pulse Animation for Button */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Default size */
+        box-shadow: 0 0 10px rgba(166, 200, 240, 0.5); /* Subtle glow */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        box-shadow: 0 0 20px rgba(166, 200, 240, 1); /* Brighter glow */
+    }
+}
+
+/* ========== Contact Section ========== */
+#contact {
+    padding: 20px 10px;
+}
+
+#contact h2 {
+    margin-bottom: 10px;
+    color: #6a4c93; /* Deep purple */
+}
+
+#contact p {
+    font-size: 1.1em;
+    color: #555; /* Subtle gray for text */
+}
+
+/* ========== Footer Styling ========== */
+footer {
+    padding: 20px;
+    background: #cdb4db; /* Bright purple background */
+    border-top: 5px solid #a6c8f0; /* Softer blue border */
+    color: #ffffff; /* White text */
+}
+
+/* Footer Buttons */
+footer .social-btn {
+    padding: 15px 25px; /* Button size */
+    margin: 10px;
+    background: #a6c8f0; /* Softer blue background */
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline-flex; /* Align text and icon */
+    align-items: center; /* Vertical alignment */
+    gap: 10px; /* Space between icon and text */
+    border: 2px solid #d8b4fe; /* Lavender border */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+}
+
+footer .social-btn i {
+    font-size: 1.5em; /* Icon size */
+    color: #ffffff; /* Icon matches text color */
+    transition: color 0.3s ease, transform 0.2s; /* Smooth animation */
+}
+
+footer .social-btn:hover {
+    background: #ffafcc; /* Peachy pink on hover */
+    color: #ffffff;
+    border-color: #cdb4db; /* Bright purple border on hover */
+    transform: scale(1.05); /* Slight enlarge effect */
+}
+
+footer .social-btn:hover i {
+    transform: rotate(15deg); /* Rotate icon slightly */
+}
